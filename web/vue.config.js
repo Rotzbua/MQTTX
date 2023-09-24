@@ -1,4 +1,5 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 
 process.env.VUE_APP_VERSION = require('./package.json').version
 
@@ -9,6 +10,7 @@ module.exports = {
   outputDir: buildMode === 'docker' ? 'dist' : 'dist/online-mqtt-client',
   configureWebpack: {
     plugins: [
+      new NodePolyfillPlugin(),
       new MonacoWebpackPlugin({
         output: 'static/',
         languages: ['json'],
