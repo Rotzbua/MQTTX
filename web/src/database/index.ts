@@ -49,9 +49,10 @@ class DB {
       this.db.set('settings.autoScrollInterval', 0).write()
     }
     // Set max reconnection times
-    if (!this.db.get('settings.maxReconnectTimes').value()) {
-      this.db.set('settings.maxReconnectTimes', 10).write()
-    }
+    // FIXME
+    // if (!this.db.get('settings.maxReconnectTimes').value()) {
+    //   this.db.set('settings.maxReconnectTimes', 10).write()
+    // }
     // Purple to Night
     if (this.db.get('settings.currentTheme').value() === 'purple') {
       this.db.set('settings.currentTheme', 'night').write()
