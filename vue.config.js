@@ -1,4 +1,5 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   productionSourceMap: false,
@@ -8,7 +9,16 @@ module.exports = {
     disableHostCheck: true,
   },
   configureWebpack: {
+    resolve: {
+      fallback: {
+        fs: false,
+        net:false,
+        module: false,
+        async_hooks: false
+      },
+    },
     plugins: [
+      new NodePolyfillPlugin(),
       new MonacoWebpackPlugin({
         output: 'static/',
         languages: ['json', 'javascript'],

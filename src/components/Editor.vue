@@ -156,7 +156,7 @@ export default class Editor extends Vue {
     this.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
       this.$emit('enter-event', this.value)
     })
-    this.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S, () => {
+    this.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, () => {
       this.$emit('qucik-save', this.value)
     })
     // Update editor options
@@ -198,7 +198,7 @@ export default class Editor extends Vue {
       this.editor.addAction({
         id: 'beautifyFormat',
         label: 'Beautify format',
-        keybindings: [monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_B],
+        keybindings: [monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyB],
         contextMenuGroupId: '9_cutcopypaste',
         run: () => {
           this.$emit('format')
