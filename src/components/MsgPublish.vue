@@ -144,7 +144,7 @@
           class="publish-topic-input"
           placeholder="Topic"
           v-model="msgRecord.topic"
-          @focus="handleInputFoucs"
+          @focus="handleInputFocus"
           @blur="handleInputBlur"
         >
         </el-input>
@@ -459,14 +459,14 @@ export default class MsgPublish extends Vue {
     this.$emit('handleSend', this.msgRecord, this.payloadType, this.loadHistoryData)
   }
 
-  private handleInputFoucs() {
+  private handleInputFocus() {
     if (this.topicRequired) {
       this.topicRequired = false
     }
     ipcRenderer.on('sendPayload', () => {
       this.send()
     })
-    this.$emit('foucs')
+    this.$emit('focus')
   }
 
   private handleInputBlur() {

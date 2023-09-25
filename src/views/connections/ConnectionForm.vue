@@ -682,7 +682,7 @@ export default class ConnectionForm extends Vue {
         this.$log.info(`First time created, Name: ${res?.name}, ID: ${res?.id}`)
         msgError = this.$tc('common.createfailed')
       } else {
-        // update a exisit connection
+        // update a exist connection
         if (data.id) {
           res = await connectionService.update(data.id, {
             ...data,

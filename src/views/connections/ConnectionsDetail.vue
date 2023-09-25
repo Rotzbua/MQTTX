@@ -251,7 +251,7 @@
           :disabled="sendTimeId !== null"
           :clientConnected="client.connected"
           :sendTimeId="sendTimeId"
-          @foucs="handleMessages"
+          @focus="handleMessages"
           @handleSend="sendMessage"
           @handleSendTimedMessage="handleCommand('timedMessage')"
         />
@@ -436,7 +436,7 @@ export default class ConnectionsDetail extends Vue {
   private selectedInfo: string = ''
   private chartData: ChartDataModel = {
     label: '',
-    recevied: 0,
+    received: 0,
     sent: 0,
   }
   private version = ''
@@ -1310,7 +1310,7 @@ export default class ConnectionsDetail extends Vue {
     }
   }
 
-  // Recevied message
+  // Received message
   private onMessageArrived(client: MqttClient, id: string) {
     const unsubscribe$ = new Subject()
 

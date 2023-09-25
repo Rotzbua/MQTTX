@@ -608,7 +608,7 @@ export default {
   },
   readFileErr: {
     zh: '文件读取失败：',
-    en: 'An error ocurred reading the file:',
+    en: 'An error occurred reading the file:',
     tr: 'Dosya okunurken bir hata oluştu:',
     ja: '読み込み中にエラーが発生したファイル:',
     hu: 'Hiba a fájl olvasása során',

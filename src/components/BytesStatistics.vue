@@ -39,7 +39,7 @@ export default class BytesStatistics extends Vue {
   @Prop({ default: false }) public visible!: boolean
   @Prop({ default: '' }) public label!: string
   @Prop({ default: 0 }) public sent!: number
-  @Prop({ default: 0 }) public recevied!: number
+  @Prop({ default: 0 }) public received!: number
   @Prop({ default: '' }) public uptime!: ''
   @Prop({ default: '' }) public version!: ''
 
@@ -80,7 +80,7 @@ export default class BytesStatistics extends Vue {
     }
     if (this.bytesChart && this.bytesChart.data && this.bytesChart.data.labels) {
       this.bytesChart.data.labels.push(this.label)
-      pushDatasets(0, this.recevied)
+      pushDatasets(0, this.received)
       pushDatasets(1, this.sent)
       this.bytesChart.update()
     }

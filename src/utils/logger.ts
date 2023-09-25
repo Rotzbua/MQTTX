@@ -43,7 +43,7 @@ export const quitAndRenameLogger = () => {
 }
 
 /**
- * the watcher of file appender, when the file changed trigger the onDataHandler callback funtion.
+ * the watcher of file appender, when the file changed trigger the onDataHandler callback function.
  * @param filename - the file name
  * @param onDataHandler - data stream handle
  * @param onErrorHandler - data error handle

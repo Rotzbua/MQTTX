@@ -681,7 +681,7 @@ export default class ConnectionsList extends Vue {
           // delete collection
           const index = childrenNode.findIndex((d: ConnectionModelTree) => d.id === selectedCollection.id)
           childrenNode.splice(index, 1)
-          // delete the chilren
+          // delete the children
           const { collectionService } = useServices()
           await collectionService.delete(selectedCollection.id)
           this.$message.success(this.$tc('common.deleteSuccess'))

@@ -54,7 +54,7 @@ declare global {
 
   interface ChartDataModel {
     label: string
-    recevied: number
+    received: number
     sent: number
   }
 

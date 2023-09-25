@@ -148,7 +148,7 @@ async function createWindow() {
       win?.webContents.send('setting', 'theme', theme)
     }
   })
-  // Menu Manger
+  // Menu Manager
   const templateMenu = getMenuTemplate(win, setting?.currentLang)
   menu = Menu.buildFromTemplate(templateMenu)
   Menu.setApplicationMenu(menu)

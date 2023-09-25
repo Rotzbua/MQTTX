@@ -65,7 +65,7 @@
           />
         </p>
       </div>
-      <pre v-if="!hightlight">{{ payload }}</pre>
+      <pre v-if="!highlight">{{ payload }}</pre>
       <pre v-else><code class="language-js" >{{ payload }}</code></pre>
     </div>
     <p class="left-time time">{{ createAt }}</p>
@@ -95,7 +95,7 @@ export default class MsgLeftItem extends Vue {
 
   @Getter('jsonHighlight') private jsonHighlight!: boolean
 
-  public hightlight: boolean = false
+  public highlight: boolean = false
 
   public customMenu(event: MouseEvent) {
     this.$emit('showmenu', this.payload, event)
@@ -134,13 +134,13 @@ export default class MsgLeftItem extends Vue {
     }
     try {
       if (this.payload && this.msgType === 'JSON' && !this.msgError) {
-        this.hightlight = true
+        this.highlight = true
         this.$nextTick(() => {
           Prism.highlightAll()
         })
       }
     } catch (e) {
-      this.hightlight = false
+      this.highlight = false
     }
   }
 

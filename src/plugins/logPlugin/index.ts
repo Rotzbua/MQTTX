@@ -3,7 +3,7 @@ import _Vue from 'vue'
 
 // Plugin object
 const VueLog4js = {
-  // Required methow initially called when instatiated
+  // Required method initially called when instantiated
   install(Vue: typeof _Vue, options?: any) {
     // Configure Log4js
     log4js.configure(options)

@@ -17,7 +17,7 @@ const saveExcel = (win: BrowserWindow, filename: string, workbook: WorkBook) => 
           dialog.showMessageBox({
             type: 'error',
             title: 'System',
-            message: `An error ocurred creating the file ${err.toString()}`,
+            message: `An error occurred creating the file ${err.toString()}`,
           })
           caughtError = true
         }

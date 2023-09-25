@@ -15,7 +15,7 @@ const saveFile = (win: BrowserWindow, filename: string, content: string, type: s
             dialog.showMessageBox({
               type: 'error',
               title: 'System',
-              message: `An error ocurred creating the file ${err.message}`,
+              message: `An error occurred creating the file ${err.message}`,
             })
           }
           win.webContents.send('saved')
