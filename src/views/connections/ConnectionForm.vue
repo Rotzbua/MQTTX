@@ -575,7 +575,6 @@
 </template>
 
 <script lang="ts">
-import { remote } from 'electron'
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
 import { Getter, Action } from 'vuex-class'
 import _ from 'lodash'

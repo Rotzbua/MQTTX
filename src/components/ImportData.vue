@@ -71,7 +71,6 @@
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
 import { Getter } from 'vuex-class'
 import fs from 'fs'
-import { remote } from 'electron'
 import MyDialog from './MyDialog.vue'
 import YAML from 'js-yaml'
 import XMLConvert from 'xml-js'

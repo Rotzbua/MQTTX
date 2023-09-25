@@ -255,7 +255,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { Getter, Action } from 'vuex-class'
-import { ipcRenderer, remote } from 'electron'
+import { ipcRenderer } from 'electron'
 import ImportData from '@/components/ImportData.vue'
 import ExportData from '@/components/ExportData.vue'
 import ClearUpHistoryData from '@/components/ClearUpHistoryData.vue'

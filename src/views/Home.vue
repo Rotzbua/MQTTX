@@ -10,7 +10,6 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { Getter, Action } from 'vuex-class'
-import { remote } from 'electron'
 import Ipc from '@/components/Ipc.vue'
 import Leftbar from '@/components/Leftbar.vue'
 

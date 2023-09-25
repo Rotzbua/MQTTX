@@ -53,7 +53,6 @@ export async function createUpdateWindow() {
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
-        enableRemoteModule: true,
       },
     })
     updateWindow.loadURL(link)

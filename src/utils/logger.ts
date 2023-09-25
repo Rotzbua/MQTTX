@@ -1,5 +1,5 @@
 import log4js from 'log4js'
-import { app, remote } from 'electron'
+import { app } from 'electron'
 import fs from 'fs-extra'
 import path from 'path'
 

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import useServices from '@/database/useServices'
-import { remote } from 'electron'
 
 const TOGGLE_THEME = 'TOGGLE_THEME'
 const TOGGLE_LANG = 'TOGGLE_LANG'

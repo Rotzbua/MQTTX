@@ -39,8 +39,6 @@ let menu: Menu | null
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: true, standard: true } }])
 
-app.allowRendererProcessReuse = false
-
 const { ConnectionInit, ConnectionDestroy } = useConnection()
 
 function handleIpcMessages() {
@@ -133,7 +131,6 @@ async function createWindow() {
     webPreferences: {
       devTools: isDevelopment,
       webSecurity: false,
-      enableRemoteModule: true,
       nodeIntegration: true,
       contextIsolation: false,
     },
