@@ -95,7 +95,7 @@ function handleIpcMessages() {
 function beforeAppQuit() {
   // close all log appender and rename log file with date
   quitAndRenameLogger()
-  // close all SQLite connection
+  // close all SQLite connections
   ConnectionDestroy()
   // quit APP
   app.quit()
